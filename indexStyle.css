@@ -1,0 +1,190 @@
+
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient( black, black, #7c0000);
+  font-family: 'verdana', sans-serif;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 15vb;
+  width: 100%;
+  margin: 0;
+  border-bottom: 2px #6dc3ff solid;
+  background: linear-gradient(black, #420000, #680000, #c30000);
+}
+
+#lienLogo {
+  display: block;
+  margin: auto;
+  width: 600px;
+  height: 100%;
+  transition: 0.15s;
+}
+
+#lienLogo:hover {
+  transform: scale(1.02);
+}
+
+#imageLogo {
+  width: 100%;
+  margin: 4vb auto 3vb auto;
+}
+
+#texteMenu {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-size: 17px;
+  margin-top: 120px;
+  font-weight: bold;
+}
+
+#zone {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  margin-top: 50px;
+  width: 500px;
+  height: 35vb;
+  display: flex;
+  justify-content: space-around;
+}
+
+#fondGauche, #fondDroite, #fondCentre {
+  position: absolute;
+  z-index: 1;
+  height: 82vb;
+  top: 15vb;
+  opacity: 0.5;
+  filter: drop-shadow(0 -10px 30px #8f0000);
+}
+
+#fondGauche {
+  left: 0;  
+}
+
+#fondDroite {
+  right: 0;
+}
+
+#fondCentre {
+  display: none;
+}
+
+.lien {
+  display: block;
+  border-radius: 20px;
+  border: 3px rgb(130, 0, 0) solid;
+  width: 200px;
+  height: 200px;
+  background-size: 100%;
+  transition: 0.2s;
+  box-shadow: 4px 4px 15px black;
+}
+
+.lien:hover {
+  transform: scale(0.97);
+  box-shadow: 0 0 0 black;
+  border: 3px #a8dbff solid;
+}
+
+#jeuNoms {
+  background-image: url('images/jeuNoms.png');
+}
+#jeuNoms:hover {
+  background-image: url('images/jeuNomsHover.png');
+}
+
+#jeuPostes {
+  background-image: url('images/jeuPostes.png');
+}
+
+#jeuPostes:hover {
+  background-image: url('images/jeuPostesHover.png');
+}
+
+.divLiens p {
+  text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+
+  header {
+    height: 10vb;
+  }
+
+  #lienLogo {
+  width: 90%;
+  }
+
+  #imageLogo {
+    margin: 3.5vb auto auto auto;
+  }
+
+  #fondGauche, #fondDroite {
+    display: none;
+  }
+
+  #fondCentre {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 12vb;
+  }
+
+  #zone {
+    margin-top: 4vb;
+    width:100%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .lien {
+    margin: auto;
+  }
+
+  #texteMenu {
+    margin-top: 4vb;
+  }
+
+  .divLiens p {
+    margin-bottom: 20px;
+  }
+
+  .lien {
+    width: 25vb;
+    height: 25vb;
+  }
+}
+
+@media all and (min-width: 451px) and (max-width: 700px) {
+  #lienLogo {
+    width: 85%;
+  }
+
+  #imageLogo {
+    margin: 5% auto auto auto;
+  }
+
+  header {
+    height: 30%;
+  }
+
+  #zone {
+    max-width: 80%;
+  }
+
+  .lien {
+    margin: 0 5px 0 5px;
+  }
+}

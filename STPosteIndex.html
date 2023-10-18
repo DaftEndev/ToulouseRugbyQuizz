@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>Trouve le poste</title>
+	<link rel="stylesheet" type="text/css" href="STPosteStyle.css">
+	<link rel="icon" href="images/faviconST.png">
+</head>
+<body>
+	<audio id="sonVictoire"><source src="sons/victoire.mp3"></audio>
+	<audio id="sonEchec"><source src="sons/echec.mp3"></audio>
+	<audio id="sonSuivant"><source src="sons/suivant.mp3"></audio>
+	<header>
+		<a id="lienLogo" href="index.html"><img src="images/logo.png" id="imageLogo"></a>
+	</header>
+
+	<img src="images/fondGauche.png" id="fondGauche">
+	<img src="images/fondDroite.png" id="fondDroite">
+
+	<div id="zone">
+
+		<button id="boutonRetour" onclick="retourIndex()"><img id="imagesRetour" src="images/fleche.png"></button>
+		
+		<div id="barreComplete">
+			<div id="barrePourcentage"></div>
+			<p id="totalPersoAffiche">0</p>
+			<p id="nombrePersoAffiche">0</p>
+			<pre id="score"><b>score</b>   0 / 0</pre>
+			<pre id="compteurID"><b>temps</b>   00 : 00</pre>
+		</div>
+
+		<div id="divReussite">
+			<p id="texteReussite">Bravo</p>
+			<img src="images/coupe.png" id="imageCoupe">
+			<div id="divBoutonRejouer"></div>
+			<div id="barreReussite">
+				<div id="barrePourcentageReussite"></div>
+				<p id="pourcentageReussiteAffiche">50%</p>
+			</div>
+		</div>
+		
+		<div id="divSousTexte"><p id="sousTexte"></p></div>
+
+		<div id="divGauche">
+			<img id="imagePerso" src="images/imageDepart.png">
+			<div id="divNomJoueur"><p id="nomJoueur"></p></div>
+			<p id="texteAffiche"></p>
+			<div id="divMenu">
+				<button class="boutonMenu" id="boutonFacile" onclick="lancerFacile()">Facile</button>
+				<button class="boutonMenu" id="boutonMoyen" onclick="lancerMoyen()">Moyen</button>
+				<button class="boutonMenu" id="boutonDifficile" onclick="lancerDifficile()">Difficile</button>
+			</div>
+		</div>
+
+		<div id="divCentre" class="classTerrain">
+			<img id="terrain" src="images/terrain.png"></img>
+			<div id="divBoutons">
+				<button id="boutonPilier1" class="pilier bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointPilier1" class="point">1</p>
+				</button>
+
+				<button id="boutonPilier2" class="pilier bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointPilier2" class="point">3</p>
+				</button>
+
+				<button id="boutonTalonneur" class="talonneur bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointTalonneur" class="point">2</p>
+				</button>
+
+				<button id="boutonDeuxiemeLigne" class="deuxieme bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointDeuxiemeLigne1" class="point">4</p>
+					<p id="pointDeuxiemeLigne2" class="point">5</p>
+				</button>
+
+				<button id="boutonTroisiemeLigne" class="troisieme bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointTroisiemeLigne1" class="point">6</p>
+					<p id="pointTroisiemeLigne2" class="point">7</p>
+					<p id="pointTroisiemeLigne3" class="point">8</p>
+				</button>
+
+				<button id="boutonMelee" class="melee bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointMelee" class="point">9</p>
+				</button>
+
+				<button id="boutonOuverture" class="ouverture bouton"onclick="lancerGuess(this.classList[0])">
+					<p id="pointOuverture" class="point2">10</p>
+				</button>
+
+				<button id="boutonCentre" class="centre bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointCentre1" class="point2">12</p>
+					<p id="pointCentre2" class="point2">13</p>
+				</button>
+
+				<button id="boutonAilier1" class="ailier bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointAilier1" class="point2">11</p>
+				</button>
+
+				<button id="boutonAilier2" class="ailier bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointAilier2" class="point2">14</p>
+				</button>
+
+				<button id="boutonArriere" class="arriere bouton" onclick="lancerGuess(this.classList[0])">
+					<p id="pointArriere" class="point2">15</p>
+				</button>
+			</div>
+		</div>
+
+		<div id="divDroite">
+			<p id="bullePilier" class="bulle pilier">Pilier</p>
+			<p id="bulleTalonneur" class="bulle talonneur">Talonneur</p>
+			<p id="bulleDeuxiemeLigne" class="bulle deuxieme">Deuxième ligne</p>
+			<p id="bulleTroisiemeLigne" class="bulle troisieme">Troisième ligne</p>
+			<p id="bulleMelee" class="bulle melee">Demi de mêlée</p>
+			<p id="bulleOuverture" class="bulle ouverture">Demi d'ouverture</p>
+			<p id="bulleCentre" class="bulle centre">Centre</p>
+			<p id="bulleAilier" class="bulle ailier">Ailier</p>
+			<p id="bulleArriere" class="bulle arriere">Arrière</p>
+		</div>
+	</div>
+
+<script src="STPosteScript.js"></script>
+<script src="STPosteScriptAnimations.js"></script>
+</body>
+</html>

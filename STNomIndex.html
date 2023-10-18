@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	<title>Trouve le joueur</title>
+	<link rel="stylesheet" type="text/css" href="STNomStyle.css">
+	<link rel="icon" href="images/faviconST.png">
+</head>
+<body>
+	<audio id="sonVictoire"><source src="sons/victoire.mp3"></audio>
+	<audio id="sonEchec"><source src="sons/echec.mp3"></audio>
+	<audio id="sonSuivant"><source src="sons/suivant.mp3"></audio>
+	
+	<header>
+		<a id="lienLogo" href="index.html"><img src="images/logo.png" id="imageLogo"></a>
+	</header>
+
+	<img src="images/fondGauche.png" id="fondGauche">
+	<img src="images/fondDroite.png" id="fondDroite">
+	<div id="ContFondCentre"><img src="images/fondCentre.png" id="fondCentre"></div>
+
+	<div id="zone">
+		<button id="boutonRetour" onclick="retourIndex()"><img id="imagesRetour" src="images/fleche.png"></button>
+		
+		<div id="barreComplete">
+			<div id="barrePourcentage"></div>
+			<p id="totalPersoAffiche">0</p>
+			<p id="nombrePersoAffiche">0</p>
+		</div>
+
+		<div id="zoneImage">
+			<img id="imagePerso" src="images/imageDepart.png" class="imagePerso">
+			<img src="images/coupe.png" id="imageCoupe">
+		</div>
+
+		<div id="barreReussite">
+			<div id="barrePourcentageReussite"></div>
+			<p id="pourcentageReussiteAffiche">50%</p>
+		</div>
+
+		<div id="zoneTexte">
+			<p id="texteAffiche"></p>
+		</div>
+
+		<div id="propositions">
+			<button id="boutonFacile" class="boutonsCommencer" onclick="lancerFacile()">Facile</button>
+			<button id="boutonMoyen" class="boutonsCommencer" onclick="lancerMoyen()">Moyen</button>
+			<button id="boutonDifficile" class="boutonsCommencer" onclick="lancerDifficile()">Difficile</button>
+		</div>
+		<div id="divSousTexte"><p id="sousTexte"></p></div>
+		<pre id="score"><b>score</b>   0 / 0</pre>
+		<pre id="compteurID"><b>temps</b>   00 : 00</pre>
+	</div>
+
+<script src="STNomScript.js"></script>
+</body>
+</html>

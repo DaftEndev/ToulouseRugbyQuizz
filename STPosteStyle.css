@@ -1,0 +1,720 @@
+
+
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient( black, black, #7c0000);
+  font-family: 'verdana', sans-serif;
+  font-weight: bold;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  margin: 0;
+}
+
+header {
+  height: 15vb;
+  width: 100%;
+  margin: 0;
+  border-bottom: 2px #6dc3ff solid;
+  background: linear-gradient(black, #420000, #680000, #c30000);
+}
+
+#lienLogo {
+  display: block;
+  margin: auto;
+  width: 600px;
+  height: 100%;
+  transition: 0.15s;
+  opacity: 0.8;
+}
+
+#lienLogo:hover {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+#imageLogo {
+  width: 100%;
+  margin: 4vb auto 3vb auto;
+}
+
+#zone {
+	border-top: 3px rgb(130, 0, 0) solid;
+	width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  padding-top: 20px;
+  text-align: center;
+  margin-top: 80px;
+  position: relative;
+}
+
+#fondGauche, #fondDroite {
+	position: absolute;
+	height: 82vb;
+  top: 15vb;
+	opacity: 0.5;
+	filter: drop-shadow(0 -10px 30px #8f0000);
+}
+
+#fondGauche {
+	left: 0;	
+}
+
+#fondDroite {
+	right: 0;
+}
+
+#imagePerso {
+  width: 230px;
+  margin-top: 10px;
+  margin-right: auto;
+  border-radius: 50px;
+  transition: 1s;
+}
+
+#nomJoueur {
+	border-radius: 20px;
+	filter: drop-shadow(0px 3px 5px black);
+}
+
+#divGauche {
+	width: 265px;
+	position: relative;
+}
+
+#divCentre {
+	position: relative;
+	width: 360px;
+	height: 480px;
+	border-radius: 13px;
+	transform: scale(1.0);
+}
+
+#terrain {
+	width: 360px;
+	border-radius: 10px;
+}
+
+#divMenu {
+	display: flex;
+	flex-direction: column;
+}
+
+.boutonMenu {
+	width: 200px;
+	margin: auto;
+	margin-bottom: 15px;
+	font-family: 'verdana', serif;
+	font-size: 17px;
+	font-weight: bold;
+	background-color: #a8dbff;
+	border-radius: 20px;
+	padding: 8px;
+	box-shadow: black 2px 4px 10px;
+	transition-property: box-shadow, transform;
+  transition-duration: 0.08s;
+  position: relative;
+}
+
+.boutonMenu:hover {
+  box-shadow: none;
+  transform: scale(0.96);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.15s;
+}
+
+#divBoutons {
+	height: 100%;
+	width: 360px;
+	transform: scale(1.2);
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	transition: 1.3s;
+}
+
+#divDroite {
+	width: 170px;
+	text-align: left;
+	opacity: 0;
+	transform: translateX(30px);
+	transition: 1.3s;
+}
+
+#divSousTexte {
+  width: 600px;
+  position: absolute;
+  left: 35px;
+  top: 480px;
+}
+
+#sousTexte {
+	text-align: left;
+  font-size: 14px;
+  margin-top: 0px;
+  opacity: 0;
+  transition: 0.25s;
+  color: #eeeeee;
+}
+
+#sousTexte b {
+	font-size: 14px;
+	font-weight: normal;
+	color: #bbbbbb;
+}
+
+#divReussite {
+	position: relative;
+	width: 500px;
+	height: 60vb;
+	display: none;
+}
+
+#barreReussite {
+  border: 2px grey solid;
+  width: 200px;
+  height: 15px;
+  border-radius: 20px;
+  position: absolute;
+  left: 150px;
+  top: 300px;
+  background: linear-gradient(to right, red, yellow, green);
+  opacity: 0;
+  transition: 1s;
+  display: flex;
+  justify-content: right;
+}
+
+#barrePourcentageReussite {
+  width: 98%;
+  height: 15px;
+  border-radius: 0 20px 20px 0;
+  transition: 2.5s;
+  background-color: #1f0000;
+  z-index: 4;
+}
+
+#pourcentageReussiteAffiche {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-size: 13px;
+  color: #80cbff;
+  z-index: 3;
+  transition: 1s;
+}
+
+#imageCoupe {
+	width: 300px;
+	transform: scale(1.4);
+	opacity: 0;
+	transition: 2s;
+}
+
+#texteReussite {
+	position: absolute;
+	top: 320px;
+	width: 100%;
+	transition: 0.8s;
+}
+
+#divBoutonRejouer {
+	position: absolute;
+	top: 410px;
+	width: 100%;
+}
+
+
+.boutonBleu {
+	min-width: 100px;
+	font-family: 'verdana', serif;
+	font-size: 17px;
+	font-weight: bold;
+	background-color: #a8dbff;
+	border-radius: 20px;
+	padding: 8px;
+	box-shadow: black 2px 4px 10px;
+	transition-property: box-shadow, transform;
+  transition-duration: 0.08s;
+  position: relative;
+}
+
+.boutonBleu:hover {
+  box-shadow: none;
+  transform: scale(0.96);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.15s;
+}
+
+#boutonRetour {
+  position: absolute;
+  border-radius: 0;
+  box-shadow: none;
+  width: 63px;
+  height: 65px;
+  background-color: transparent;
+  left: 5px;
+  top: -75px;
+  padding: 0;
+  transition-property: border, opacity;
+  transition-duration: 0.4s;
+  opacity: 0.6;
+}
+
+#boutonRetour:hover {
+  transform: none;
+  border-right: 3px #a8dbff solid;
+  opacity: 1;
+}
+
+#boutonRetour:hover > img {
+  transform: translateX(-10px);
+}
+
+#imagesRetour {
+  width: 65px;
+  transition: 0.2s;
+}
+
+#texteAffiche {
+	padding: 0;
+	margin: auto;
+	color: #ff9787;
+	font-size: 17px;
+	margin-top: 30px;
+	transition: 0.2s;
+	background-color: rgba(30, 0, 0, 0.5);
+	box-shadow: 0 0 15px rgba(40, 0, 0, 1);
+	border-radius: 25px;
+	width: 200px;
+	text-align: center;
+}
+
+.classTerrain {
+	border: 4px transparent solid;
+}
+
+#score {
+	position: absolute;
+	left: 245px;
+	top: -25px;
+	font-family: 'verdana', sans-serif;
+  width: 150px;
+  text-align: left;
+  font-size: 13px;
+  transform: translateX(40px);
+  transition: 2s;
+}
+
+#compteurID {
+	position: absolute;
+	left: -150px;
+	top: -25px;
+	font-family: 'verdana', sans-serif;
+  text-align: left;
+  width: 200px;
+  font-size: 13px;
+  transform: translateX(-40px);
+  transition: 2s;
+}
+
+#barreComplete {
+	position: absolute;
+  left: 300px;
+  top: -35px;
+  width: 200px;
+  height: 8px;
+  border: 1px #bbbbbb solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 2s;
+}
+
+b {
+  color: #bbbbbb;
+}
+
+strong {
+  color: #80cbff;
+}
+
+#barrePourcentage {
+  width: 0;
+  height: 8px;
+  background-color: #a8dbff;
+  border-radius: 5px;
+  transition-property: width;
+  transition-duration: 0.5s;
+}
+
+#totalPersoAffiche {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #bbbbbb;
+  position: absolute;
+  right: 5px;
+  top: -38px;
+}
+
+#nombrePersoAffiche {
+  font-family: sans-serif;
+  font-size: 12px;
+  color: #bbbbbb;
+  position: absolute;
+  left: 5px;
+  top: -38px;
+}
+
+.animErreur {
+  border: 4px #ca0000 solid;
+  box-shadow: 0 0 30px #ff0000;
+}
+
+.animErreurDeux {
+  border: 4px transparent solid;
+  box-shadow: none;
+  transition-property: border, box-shadow;
+  transition-duration: 2s;
+}
+
+.bulle {
+	font-size: 15px;
+	color: grey;
+	transition: 0.2s;
+	transition-property: color, transform;
+	transition-duration: 0.2s, 0.3s;
+	margin: 0px;
+	margin-left: 15px;
+	margin-bottom: 26px;
+}
+
+.point, .point2 {
+	text-align: center;
+	width: 23px;
+	height: 20px;
+	background-color: #8b1010;
+	position: absolute;
+	border-radius: 20px;
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	transition-property: color, background-color, transform;
+	transition-duration: 0.2s, 0.2s, 0.3s;
+}
+
+.point {
+	padding: 4px 1px 1px 1px;
+}
+
+.point2 {
+	padding: 4px 2px 1px 0px;
+}
+
+
+button {
+	border: none;
+	background-color: transparent ;
+	position: absolute;
+}
+
+
+#boutonPilier1 {
+	width: 75px;
+	height: 55px;
+	left: 0px;
+	bottom: 425px;
+}
+
+#boutonPilier2 {
+	width: 150px;
+	height: 55px;
+	left: 125px;
+	bottom: 425px;
+}
+
+#boutonTalonneur {
+	width: 50px;
+	height: 55px;
+	left: 75px;
+	bottom: 425px;
+}
+
+#boutonDeuxiemeLigne {
+	width: 260px;
+	height: 55px;
+	left: 0px;
+	bottom: 370px;
+}
+
+#boutonTroisiemeLigne {
+	width: 260px;
+	height: 55px;
+	left: 0px;
+	bottom: 315px;
+}
+
+#boutonMelee {
+	width: 260px;
+	height: 55px;
+	left: 10px;
+	bottom: 260px;
+}
+
+#boutonOuverture {
+	width: 260px;
+	height: 55px;
+	left: 20px;
+	bottom: 205px;
+}
+
+#boutonCentre {
+	width: 230px;
+	height: 125px;
+	left: 130px;
+	bottom: 80px;
+}
+
+#boutonAilier1 {
+	width: 130px;
+	height: 90px;
+	left: 0px;
+	bottom: 80px;
+}
+
+#boutonAilier2 {
+	width: 110px;
+	height: 80px;
+	left: 250px;
+	bottom: 0px;
+}
+
+#boutonArriere {
+	width: 250px;
+	height: 80px;
+	left: 0px;
+	bottom: 0px;
+}
+
+#pointTalonneur {
+	bottom: -2px;
+	left: 12px;
+}
+
+#pointPilier1 {
+	bottom: -2px;
+	left: 40px;
+}
+
+#pointPilier2 {
+	bottom: -2px;
+	left: 10px;
+}
+
+#pointDeuxiemeLigne1 {
+	bottom: -1px;
+	left: 64px;
+}
+
+#pointDeuxiemeLigne2 {
+	bottom: -1px;
+	left: 111px;
+}
+
+#pointTroisiemeLigne1 {
+	bottom: -1px;
+	left: 40px;
+}
+
+#pointTroisiemeLigne2 {
+	bottom: -1px;
+	left: 87px;
+}
+
+#pointTroisiemeLigne3 {
+	bottom: -1px;
+	left: 135px;
+}
+
+#pointMelee {
+	bottom: 0px;
+	left: 77px;
+}
+
+#pointOuverture {
+	bottom: 1px;
+	left: 113px;
+}
+
+#pointCentre1 {
+	bottom: 60px;
+	left: 60px;
+}
+
+#pointCentre2 {
+	bottom: 12px;
+	left: 102px;
+}
+
+#pointAilier1 {
+	bottom: 12px;
+	left: 40px;
+}
+
+#pointAilier2 {
+	bottom: 13px;
+	left: 50px;
+}
+
+#pointArriere {
+	bottom: 0px;
+	left: 166px;
+}
+
+
+@media screen and (max-width: 700px) {
+
+  header {
+    height: 10%;
+  }
+
+  #lienLogo {
+  width: 90%;
+  }
+
+  #imageLogo {
+    margin: 3.5vb auto auto auto;
+  }
+
+  #fondGauche, #fondDroite {
+    display: none;
+  }
+
+  #zone {
+  	display: block;
+    margin-top: 8vb;
+    width:95%;
+    height: 60vh;
+    flex-direction: column;
+    border: none;
+  }
+
+  #zoneTexte {
+    width: 100%;
+  }
+
+  #divSousTexte {
+    display: none;
+  }
+
+  #barreComplete {
+  	position: relative;
+  	margin: auto;
+  	left: auto;
+  }
+
+  #score {
+		position: absolute;
+		left: 160px;
+		top: -2px;
+	  width: 100px;
+	  font-size: 13px;
+	  transform: translateX(0);
+	}
+
+	#compteurID {
+		position: absolute;
+		left: -45px;
+		top: -2px;
+	  width: 100px;
+	  font-size: 13px;
+	  transform: translateX(0);
+	}
+
+  #imagePerso {
+  	position: absolute;
+    width: 150px;
+    border-radius: 15px;
+    right: 8px;
+    top: 3px;
+    z-index: 2;
+  }
+
+  #divGauche {
+  	position: relative;
+  	margin: auto;
+  	border: 1px transparent solid;
+  	width: 360px;
+  	height: 350px;
+  }
+
+  #divMenu {
+  	width: 200px;
+  	position: absolute;
+  	top: 240px;
+  	left: 80px;
+  }
+
+  .boutonMenu {
+  	width: 150px;
+  	font-size: 14px;
+  	z-index: 2;
+  }
+
+  #divNomJoueur {
+  	width: 150px;
+  	z-index: 2;
+  	position: absolute;
+  	right: 8px;
+  	top: 165px;
+  	text-align: center;
+  }
+
+  #nomJoueur {
+  	font-size: 12px;
+  	margin: 0;
+  	filter: drop-shadow(0px 3px 4px black);
+  }
+
+  #divCentre {
+  	z-index: 1;
+  	top: -350px;
+  	margin: auto;
+  }
+
+  #divDroite {
+  	display: none;
+  }
+
+  #texteAffiche {
+  	position: relative;
+  	z-index: 2;
+  	top: 460px;
+  	font-size: 15px;
+  }
+
+  #divBoutons {
+  	transform: scale(1.0);
+  }
+
+	#divReussite {
+		width: 100%;
+		position: relative;
+	}
+
+	#barreReussite {
+	  position: relative;
+	  margin: auto;
+	  top: -20px;
+	  left: auto;
+	}
+
+	.bouton p {
+		transform: scale(1.08);
+	}
+}
