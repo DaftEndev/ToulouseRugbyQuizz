@@ -13,13 +13,13 @@ const facile = [
     { nom: "delibes", nomComplet: "Dimitri DELIBES", image: "images/delibes.png", poste: "ailier"},
     { nom: "dupont", nomComplet: "Antoine DUPONT", image: "images/dupont.png", poste: "melee"},
     { nom: "duprat", nomComplet: "Maxime DUPRAT", image: "images/duprat.png", poste: "pilier"},
-    { nom: "elstadt", nomComplet: "Rynhard ELSTADT", image: "images/elstadt.png", poste: "troisieme"},
+    { nom: "faasalele", nomComplet: "Piula FAASALELE", image: "images/faasalele.png", poste: "deuxieme"},
     { nom: "flament", nomComplet: "Thibaud FLAMENT", image: "images/flament.png", poste: "deuxieme"},
     { nom: "germain", nomComplet: "Baptiste GERMAIN", image: "images/germain.png", poste: "melee"},
     { nom: "graou", nomComplet: "Paul GRAOU", image: "images/graou.png", poste: "melee"},
     { nom: "guitoune", nomComplet: "Sofiane GUITOUNE", image: "images/guitoune.png", poste: "centre"},
-    { nom: "jaminet", nomComplet: "Melvyn JAMINET", image: "images/jaminet.png", poste: "arriere"},
     { nom: "jelonch", nomComplet: "Anthony JELONCH", image: "images/jelonch.png", poste: "troisieme"},
+    { nom: "kinghorn", nomComplet: "Blair Kinghorn", image: "images/kinghorn.png", poste: "arriere"},
     { nom: "lebel", nomComplet: "Matthis LEBEL", image: "images/lebel.png", poste: "ailier"},
     { nom: "mallia", nomComplet: "Juan Cruz MALLÍA", image: "images/mallia.png", poste: "arriere"},
     { nom: "marchand", nomComplet: "Julien MARCHAND", image: "images/marchand.png", poste: "talonneur"},
@@ -46,17 +46,14 @@ const moyen = [
     { nom: "costes", nomComplet: "Paul COSTES", image: "images/costes.png", poste: "centre"},
     { nom: "delpy", nomComplet: "Valentin DELPY", image: "images/delpy.png", poste: "ouverture"},
     { nom: "epee", nomComplet: "Nelson ÉPÉE", image: "images/epee.png", poste: "ailier"},
-    { nom: "faasalele", nomComplet: "Piula FAASALELE", image: "images/faasalele.png", poste: "deuxieme"},
-    { nom: "franks", nomComplet: "Owen FRANKS", image: "images/franks.png", poste: "pilier"},
+    { nom: "gourgues", nomComplet: "Kalvin Gourgues", image: "images/gourgues.png", poste: "ouverture"},
     { nom: "hawkes", nomComplet: "Malachi HAWKES", image: "images/hawkes.png", poste: "pilier"},
     { nom: "laulala", nomComplet: "Nepo LAULALA", image: "images/laulala.png", poste: "pilier"},
+    { nom: "mallez", nomComplet: "Paul Mallez", image: "images/mallez.png", poste:"pilier"},
     { nom: "merkler", nomComplet: "Joel MERKLER", image: "images/merkler.png", poste: "pilier"},
-    { nom: "okumura", nomComplet: "Kakeru OKUMURA", image: "images/okumura.png", poste: "arriere"},
     { nom: "reilhes", nomComplet: "Hugo REILHES", image: "images/reilhes.png", poste: "pilier"},
     { nom: "renda", nomComplet: "Simon RENDA", image: "images/renda.png", poste: "centre"},
     { nom: "eretiere", nomComplet: "Edgar RETIÈRE", image: "images/eretiere.png", poste: "ouverture"},
-    { nom: "searle", nomComplet: "Billy SEARLE", image: "images/searle.png", poste: "ouverture"},
-    { nom: "tilsley", nomComplet: "George TILSLEY", image: "images/tilsley.png", poste: "ailier"},
     { nom: "verge", nomComplet: "Clement VERGÉ", image: "images/verge.png", poste: "deuxieme"},
 
 ];
@@ -204,7 +201,7 @@ function resetAnimation () {
 
 function animationSousTexte () {
 boutonFacile.addEventListener('mouseover', () => {
-  sousTexte.innerHTML = `Joueurs les plus titularisés<br><b>(ayant joué plus de 10 matchs à Toulouse lors d'une précédente saison)</b>`
+  sousTexte.innerHTML = `Joueurs les plus connus<br><b>(ayant joué 10 matchs ou plus à Toulouse lors d'une saison)</b>`
   sousTexte.style.opacity = '1';
 });
 
@@ -213,7 +210,7 @@ boutonFacile.addEventListener('mouseout', () => {
 });
 
 boutonMoyen.addEventListener('mouseover', () => {
-  sousTexte.innerHTML = `Joueurs moins titularisés<br><b>(ayant joué moins de 10 matchs à Toulouse lors d'une précédente saison)</b>`
+  sousTexte.innerHTML = `Joueurs moins connus<br><b>(ayant joué moins de 10 matchs à Toulouse lors d'une saison)</b>`
   sousTexte.style.opacity = '1';
 });
 

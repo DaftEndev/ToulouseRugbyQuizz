@@ -13,13 +13,13 @@ const facile = [
     { nom: "delibes", nomComplet: "Dimitri DELIBES", image: "images/delibes.png"},
     { nom: "dupont", nomComplet: "Antoine DUPONT", image: "images/dupont.png"},
     { nom: "duprat", nomComplet: "Maxime DUPRAT", image: "images/duprat.png"},
-    { nom: "elstadt", nomComplet: "Rynhard ELSTADT", image: "images/elstadt.png"},
+    { nom: "faasalele", nomComplet: "Piula FAASALELE", image: "images/faasalele.png"},
     { nom: "flament", nomComplet: "Thibaud FLAMENT", image: "images/flament.png"},
     { nom: "germain", nomComplet: "Baptiste GERMAIN", image: "images/germain.png"},
     { nom: "graou", nomComplet: "Paul GRAOU", image: "images/graou.png"}, //15
     { nom: "guitoune", nomComplet: "Sofiane GUITOUNE", image: "images/guitoune.png"},
-    { nom: "jaminet", nomComplet: "Melvyn JAMINET", image: "images/jaminet.png"},
     { nom: "jelonch", nomComplet: "Anthony JELONCH", image: "images/jelonch.png"},
+    { nom: "kinghorn", nomComplet: "Blair Kinghorn", image: "images/kinghorn.png"},
     { nom: "lebel", nomComplet: "Matthis LEBEL", image: "images/lebel.png"},
     { nom: "mallia", nomComplet: "Juan Cruz MALLÍA", image: "images/mallia.png"},
     { nom: "marchand", nomComplet: "Julien MARCHAND", image: "images/marchand.png"},
@@ -46,17 +46,14 @@ const moyen = [
     { nom: "costes", nomComplet: "Paul COSTES", image: "images/costes.png"},
     { nom: "delpy", nomComplet: "Valentin DELPY", image: "images/delpy.png"},
     { nom: "epee", nomComplet: "Nelson ÉPÉE", image: "images/epee.png"},
-    { nom: "faasalele", nomComplet: "Piula FAASALELE", image: "images/faasalele.png"},
-    { nom: "franks", nomComplet: "Owen FRANKS", image: "images/franks.png"},
+    { nom: "gourgues", nomComplet: "Kalvin Gourgues", image: "images/gourgues.png"},
     { nom: "hawkes", nomComplet: "Malachi HAWKES", image: "images/hawkes.png"},
     { nom: "laulala", nomComplet: "Nepo LAULALA", image: "images/laulala.png"},
+    { nom: "mallez", nomComplet: "Paul Mallez", image: "images/mallez.png"},
     { nom: "merkler", nomComplet: "Joel MERKLER", image: "images/merkler.png"},
-    { nom: "okumura", nomComplet: "Kakeru OKUMURA", image: "images/okumura.png"},
     { nom: "reilhes", nomComplet: "Hugo REILHES", image: "images/reilhes.png"},
     { nom: "renda", nomComplet: "Simon RENDA", image: "images/renda.png"},
     { nom: "eretiere", nomComplet: "Edgar RETIÈRE", image: "images/eretiere.png"},
-    { nom: "searle", nomComplet: "Billy SEARLE", image: "images/searle.png"},
-    { nom: "tilsley", nomComplet: "George TILSLEY", image: "images/tilsley.png"},
     { nom: "verge", nomComplet: "Clement VERGÉ", image: "images/verge.png"},
 
 ];
@@ -215,7 +212,7 @@ function animerErreur () {
 
 function animationSousTexte () {
 boutonFacile.addEventListener('mouseover', () => {
-  sousTexte.innerHTML = `Joueurs les plus titularisés<br><b>(ayant joué plus de 10 matchs à Toulouse lors d'une précédente saison)<b>`
+  sousTexte.innerHTML = `Joueurs les plus connus<br><b>(ayant joué 10 matchs ou plus à Toulouse lors d'une saison)<b>`
   sousTexte.style.opacity = '1';
 });
 
@@ -224,7 +221,7 @@ boutonFacile.addEventListener('mouseout', () => {
 });
 
 boutonMoyen.addEventListener('mouseover', () => {
-  sousTexte.innerHTML = `Joueurs moins titularisés<br><b>(ayant joué moins de 10 matchs à Toulouse lors d'une précédente saison)<b>`
+  sousTexte.innerHTML = `Joueurs moins connus<br><b>(ayant joué moins de 10 matchs à Toulouse lors d'une saison)<b>`
   sousTexte.style.opacity = '1';
 });
 
