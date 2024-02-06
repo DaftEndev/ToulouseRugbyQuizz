@@ -19,7 +19,6 @@ const facile = [
     { nom: "graou", nomComplet: "Paul GRAOU", image: "images/graou.png"}, //15
     { nom: "guitoune", nomComplet: "Sofiane GUITOUNE", image: "images/guitoune.png"},
     { nom: "jelonch", nomComplet: "Anthony JELONCH", image: "images/jelonch.png"},
-    { nom: "kinghorn", nomComplet: "Blair Kinghorn", image: "images/kinghorn.png"},
     { nom: "lebel", nomComplet: "Matthis LEBEL", image: "images/lebel.png"},
     { nom: "mallia", nomComplet: "Juan Cruz MALLÍA", image: "images/mallia.png"},
     { nom: "marchand", nomComplet: "Julien MARCHAND", image: "images/marchand.png"},
@@ -48,6 +47,7 @@ const moyen = [
     { nom: "epee", nomComplet: "Nelson ÉPÉE", image: "images/epee.png"},
     { nom: "gourgues", nomComplet: "Kalvin Gourgues", image: "images/gourgues.png"},
     { nom: "hawkes", nomComplet: "Malachi HAWKES", image: "images/hawkes.png"},
+    { nom: "kinghorn", nomComplet: "Blair Kinghorn", image: "images/kinghorn.png"},
     { nom: "laulala", nomComplet: "Nepo LAULALA", image: "images/laulala.png"},
     { nom: "mallez", nomComplet: "Paul Mallez", image: "images/mallez.png"},
     { nom: "merkler", nomComplet: "Joel MERKLER", image: "images/merkler.png"},
